@@ -138,29 +138,3 @@ canvas {
 .whatsapp-btn:hover {
   background-color: #1ebc5c;
 }
-
-.fade {
-  animation: fadeIn 1.2s ease forwards;
-  opacity: 0;
-}
-
-.fade-in {
-  animation: fadeInUp 2s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <audio autoplay loop>
+
+  <audio id="mymusic">
     <source src="media/muzik.mp3" type="audio/mpeg" />
   </audio>
 
@@ -19,7 +20,10 @@
 
     <h2>Benimle çıkar mısın?</h2>
 
-    <button onclick="cevapVer()">Evet 💖</button>
+    <div class="butonlar">
+      <button onclick="cevapVer()" id="evet">Evet 💖</button>
+      <button id="hayir">Hayır 🙈</button>
+    </div>
 
     <div id="cevap" class="hidden">
       <p class="kutlama">🎉 Seni çok seviyorum! 🎉</p>
@@ -30,6 +34,8 @@
     </div>
   </div>
 
+  <canvas id="confettiCanvas"></canvas>
   <script src="script.js"></script>
 </body>
 </html>
+`

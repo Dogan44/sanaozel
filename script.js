@@ -1,26 +1,30 @@
+let hoverCount = 0;
+
 const hayirButon = document.getElementById("hayir");
 
 hayirButon.addEventListener("mouseover", () => {
-  const x = Math.floor(Math.random() * (window.innerWidth - 150));
-  const y = Math.floor(Math.random() * (window.innerHeight - 150));
-  hayirButon.style.position = "absolute";
-  hayirButon.style.left = `${x}px`;
-  hayirButon.style.top = `${y}px`;
+  hoverCount++;
+  if (hoverCount >= 2) {
+    const x = Math.floor(Math.random() * (window.innerWidth - 150));
+    const y = Math.floor(Math.random() * (window.innerHeight - 150));
+    hayirButon.style.position = "absolute";
+    hayirButon.style.left = `${x}px`;
+    hayirButon.style.top = `${y}px`;
+  }
 });
 
 function cevapVer() {
   document.getElementById("cevap").classList.remove("hidden");
 
-  // Müziği başlat
   const music = document.getElementById("mymusic");
   music.play().catch(() => {
     alert("Tarayıcı otomatik müziği engelledi. Lütfen sesi aç.");
   });
 
-  // Konfeti başlat
   startConfetti();
 }
 
+// Basit konfeti efekti
 function startConfetti() {
   const canvas = document.getElementById("confettiCanvas");
   const ctx = canvas.getContext("2d");

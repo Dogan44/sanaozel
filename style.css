@@ -15,11 +15,13 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: auto;
+  transition: all 0.5s ease;
 }
 
 h1 {
   font-size: 2.5em;
   color: #b83b5e;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -40,11 +42,12 @@ button {
   font-size: 1.2em;
   cursor: pointer;
   margin: 10px;
-  transition: 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 button:hover {
   background: #6a0572;
+  transform: scale(1.05);
 }
 
 .hidden {
@@ -69,6 +72,7 @@ button:hover {
   margin-bottom: 20px;
 }
 
+/* Konfeti */
 canvas {
   position: fixed;
   top: 0;
@@ -77,4 +81,31 @@ canvas {
   width: 100vw;
   height: 100vh;
   z-index: 999;
+}
+
+/* Animasyonlar */
+.fade {
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeInUp 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

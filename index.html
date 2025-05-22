@@ -12,25 +12,22 @@
     <source src="media/muzik.mp3" type="audio/mpeg" />
   </audio>
 
-  <div class="container">
-    <h1>Canımın İçi</h1>
-    <p>Bu satırları sana özel yazıyorum çünkü sen benim hayatımdaki en değerli insansın.</p>
-    <p>Birlikte geçirdiğimiz zamanlar, yaşadığımız her an benim için çok kıymetliydi.</p>
-    <p>Ve sana çok özel bir soru sormak istiyorum...</p>
+  <div class="container fade-in">
+    <h1 class="fade">Canımın İçi</h1>
+    <p class="fade">Bu satırları sana özel yazıyorum çünkü sen benim hayatımdaki en değerli insansın.</p>
+    <p class="fade">Birlikte geçirdiğimiz zamanlar, yaşadığımız her an benim için çok kıymetliydi.</p>
+    <p class="fade">Ve sana çok özel bir soru sormak istiyorum...</p>
 
-    <h2>Benimle çıkar mısın?</h2>
+    <h2 class="fade">Benimle çıkar mısın?</h2>
 
     <div class="butonlar">
       <button onclick="cevapVer()" id="evet">Evet 💖</button>
       <button id="hayir">Hayır 🙈</button>
     </div>
 
-    <div id="cevap" class="hidden">
+    <div id="cevap" class="hidden fade">
       <p class="kutlama">🎉 Seni çok seviyorum! 🎉</p>
       <img src="media/foto1.jpg" alt="Birlikte anımız" class="fotograf" />
-      <video controls width="300">
-        <source src="media/video1.mp4" type="video/mp4" />
-      </video>
     </div>
   </div>
 

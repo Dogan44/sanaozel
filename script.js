@@ -1,17 +1,19 @@
 let hoverCount = 0;
-
 const hayirButon = document.getElementById("hayir");
 
-hayirButon.addEventListener("mouseover", () => {
+function kacirButon() {
   hoverCount++;
   if (hoverCount >= 2) {
-    const x = Math.floor(Math.random() * (window.innerWidth - 150));
-    const y = Math.floor(Math.random() * (window.innerHeight - 150));
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 150);
     hayirButon.style.position = "absolute";
     hayirButon.style.left = `${x}px`;
     hayirButon.style.top = `${y}px`;
   }
-});
+}
+
+hayirButon.addEventListener("mouseover", kacirButon);
+hayirButon.addEventListener("touchstart", kacirButon);
 
 function cevapVer() {
   document.getElementById("cevap").classList.remove("hidden");
@@ -24,12 +26,17 @@ function cevapVer() {
   startConfetti();
 }
 
-// Basit konfeti efekti
 function startConfetti() {
   const canvas = document.getElementById("confettiCanvas");
   const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
 
   const pieces = [];
 

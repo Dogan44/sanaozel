@@ -4,7 +4,7 @@ body {
   background: linear-gradient(to right, #ffdde1, #ee9ca7);
   color: #333;
   text-align: center;
-  padding: 40px;
+  padding: 40px 20px;
   overflow-x: hidden;
 }
 
@@ -31,6 +31,8 @@ h2 {
 
 .butonlar {
   margin-top: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 button {
@@ -43,6 +45,8 @@ button {
   cursor: pointer;
   margin: 10px;
   transition: transform 0.3s, background 0.3s;
+  position: relative;
+  z-index: 10;
 }
 
 button:hover {
@@ -72,7 +76,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* Konfeti */
 canvas {
   position: fixed;
   top: 0;
@@ -80,12 +83,21 @@ canvas {
   pointer-events: none;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
+  z-index: 1;
 }
 
-/* Animasyonlar */
+.siir-kutusu {
+  background-color: #fff7f7;
+  border: 2px dashed #b83b5e;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+  font-style: italic;
+  color: #444;
+}
+
 .fade {
-  animation: fadeIn 1.5s ease forwards;
+  animation: fadeIn 1.2s ease forwards;
   opacity: 0;
 }
 

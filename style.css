@@ -41,7 +41,6 @@ button {
   cursor: pointer;
   margin: 10px;
   transition: 0.3s;
-  position: relative;
 }
 
 button:hover {
@@ -60,4 +59,22 @@ button:hover {
   margin-top: 20px;
   width: 100%;
   max-width: 400px;
-  border-radius: 15p
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kutlama {
+  font-size: 1.5em;
+  color: #b83b5e;
+  margin-bottom: 20px;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}

@@ -12,13 +12,15 @@ function cevapVer() {
   document.getElementById("cevap").classList.remove("hidden");
 
   // Müziği başlat
-  document.getElementById("mymusic").play();
+  const music = document.getElementById("mymusic");
+  music.play().catch(() => {
+    alert("Tarayıcı otomatik müziği engelledi. Lütfen sesi aç.");
+  });
 
   // Konfeti başlat
   startConfetti();
 }
 
-// Basit konfeti efekti
 function startConfetti() {
   const canvas = document.getElementById("confettiCanvas");
   const ctx = canvas.getContext("2d");

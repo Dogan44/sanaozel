@@ -104,35 +104,41 @@ canvas {
   opacity: 0.7;
 }
 
-/* Kalp animasyonu */
-.hearts::before {
-  content: "💖 💕 💗 💓 💞 💘";
-  display: block;
-  font-size: 2rem;
-  animation: hearts 3s linear infinite;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  opacity: 0.8;
+.whatsapp-bolumu {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-@keyframes hearts {
-  0% {
-    top: -10%;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    top: 100%;
-    opacity: 0;
-  }
+.whatsapp-text {
+  font-size: 1.2em;
+  color: #00796b;
+  margin-bottom: 5px;
 }
 
-/* Animasyonlar */
+.whatsapp-kucuk {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc5c;
+}
+
 .fade {
   animation: fadeIn 1.2s ease forwards;
   opacity: 0;
